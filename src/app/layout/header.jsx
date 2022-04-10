@@ -1,6 +1,7 @@
 import React from "react";
 import heart from '../../icon/Vector.svg'
 import basket from '../../icon/Vector2.svg'
+import {Link} from "react-router-dom";
 
 const Header = ({itemCount}) => {
     console.log('icount', itemCount)
@@ -8,18 +9,18 @@ const Header = ({itemCount}) => {
         <header className='header'>
         <div className='container'>
             <div className='header-inner'>
-                <div className='brand'>
+                <Link className='brand' to='/'>
                     Qpick
-                </div>
+                </Link>
 
                 <div className='nav'>
                     <a className='header-nav-link' href='#' title='избранное'>
                         <img className='nav-icon' src={heart}/>
                     </a>
-                    <a className='header-nav-link' href='#' title='корзина'>
+                    <Link className='header-nav-link' to='/basket' title='корзина'>
                         <img className='nav-icon' src={basket}/>
                         <span className='icon-button__badge'>{itemCount}</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

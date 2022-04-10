@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import Header from "./header";
 import ShowCase from "./showCase";
 import fetchAll from "../../api/headphones.api";
+import Basket from "./basket";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 const Main = () => {
     const [basketList, setBasketList] = useState([])
@@ -68,11 +70,31 @@ const Main = () => {
 
 
     return (
-        <div className='page'>
-            <Header itemCount={sumOfItemsInBasket()}/>
-            <ShowCase addItemInBasket={handleAddingItemInBasket}
-                      items={items}/>
-        </div>
+        <BrowserRouter>
+            <div className='page'>
+                <Header itemCount={sumOfItemsInBasket()}/>
+                <Switch>
+                    <Route path='/'
+                           exact
+                           render={() => {
+                               return (<ShowCase addItemInBasket={handleAddingItemInBasket}
+                                                 items={items}/>
+                               )
+                           }}/>
+                    <Route path='/basket'
+                           exact
+                           render={() => {
+                               return (
+                                   <Basket
+                                       basketList={basketList}
+                                       handleAddingItemInBasket={handleAddingItemInBasket}
+                                       handleRemovingItemFromBasket={handleRemovingItemFromBasket}
+                                   />
+                               )
+                           }}/>
+                </Switch>
+            </div>
+        </BrowserRouter>
     )
 }
 

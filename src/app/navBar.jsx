@@ -8,7 +8,7 @@ const NavBar = () => {
           <Link className="nav-link active" aria-current="page" to='/'>Main</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to='/login'>basket</Link>
+          <Link className="nav-link" to='/basket'>basket</Link>
         </li>
       </ul>
   )
