@@ -1,6 +1,6 @@
 import Main from "./layout/main";
 import '../index.css'
-import Basket from "./layout/basket";
+// import Basket from "./layout/basket";
 function App() {
 
   return (

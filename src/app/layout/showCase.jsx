@@ -1,20 +1,26 @@
 import React from "react";
 import ProductCard from "./productCard";
+import Footer from "./footer";
 
-const ShowCase = ({items, addItemInBasket}) => {
+const ShowCase = ({headphones, wirelessHeadphones, addItemInBasket}) => {
     return (
         <div className='container'>
+            <div className='ul-showcase'>
             <ul>
                 <p className='subtitle'>Наушники</p>
-                {items.map((item) => {
+                {headphones.map((item) => {
                     return (<li
+                            className='card-product'
                             key={item.id.toString()}
-                            onClick={() => addItemInBasket(item.id)}
                         >
-                            <ProductCard img={item.img}
+                            <ProductCard id={item.id}
+                                         img={item.img}
                                          title={item.title}
                                          price={item.price}
-                                         rate={item.rate}/>
+                                         rate={item.rate}
+                                         handleAddItem={addItemInBasket}
+
+                            />
                         </li>
                     )
 
@@ -22,7 +28,26 @@ const ShowCase = ({items, addItemInBasket}) => {
             </ul>
             <ul>
                 <p className='subtitle'>Беспроводные наушники</p>
+                {wirelessHeadphones.map((item) => {
+                    return (<li
+                            className='card-product'
+                            key={item.id.toString()}
+                        >
+                            <ProductCard id={item.id}
+                                         img={item.img}
+                                         title={item.title}
+                                         price={item.price}
+                                         rate={item.rate}
+                                         handleAddItem={addItemInBasket}
+
+                            />
+                        </li>
+                    )
+
+                })}
+                <Footer/>
             </ul>
+            </div>
         </div>
     )
 }

@@ -1,18 +1,28 @@
 import React, {useEffect, useState} from "react";
 import Header from "./header";
 import ShowCase from "./showCase";
-import fetchAll from "../../api/headphones.api";
+import fetchAllHeadphones from "../../api/headphones.api";
+import fetchAllWirelessHeadphones from '../../api/wirelessHeadphones.api'
 import Basket from "./basket";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 const Main = () => {
     const [basketList, setBasketList] = useState([])
-    const [items, setItems] = useState([])
+    const [headphones, setHeadphones] = useState([])
+    const [wirelessHeadphones, setWirelessHeadphones] = useState([])
 
     useEffect(() => {
-        fetchAll()
+        fetchAllHeadphones()
             .then((data) => {
-                    setItems(data)
+                    setHeadphones(data)
+                }
+            )
+    }, [])
+
+    useEffect(() => {
+        fetchAllWirelessHeadphones()
+            .then((data) => {
+                    setWirelessHeadphones(data)
                 }
             )
     }, [])
@@ -26,9 +36,9 @@ const Main = () => {
     }
 
     const addNewElemInBasketList = (id) => {
-        const itemIndex = items.findIndex((item) => item.id === id);
+        const itemIndex = headphones.findIndex((item) => item.id === id);
         const basketItem = {
-            ...items[itemIndex],
+            ...headphones[itemIndex],
             count: 1
         }
         setBasketList(prevState => [...prevState, basketItem])
@@ -70,15 +80,19 @@ const Main = () => {
 
     return (
         <BrowserRouter>
-            <div className=''>
+            <div className='page'>
                 <Header itemCount={sumOfItemsInBasket()}/>
 
                 <Switch>
                     <Route path='/'
                            exact
                            render={() => {
-                               return (<ShowCase addItemInBasket={handleAddingItemInBasket}
-                                                 items={items}/>
+                               return (
+                                   <ShowCase
+                                       addItemInBasket={handleAddingItemInBasket}
+                                       headphones={headphones}
+                                       wirelessHeadphones={wirelessHeadphones}
+                                   />
                                )
                            }}/>
                     <Route path='/basket'

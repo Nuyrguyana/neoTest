@@ -1,19 +1,29 @@
 import React from "react";
+import star from '../../icon/star.svg'
 
-const ProductCard = ({img, title, price, rate}) => {
+const ProductCard = ({id, img, title, price, rate, handleAddItem}) => {
     return (
         <div className='content'>
-            <div>
-                <div className='card-content-image'>
-                    <img className='img-product' src={img}/>
-                </div>
-                <h3>{title}</h3>
+            <div className='card-content-image'>
+                <img className='img-product' src={img}/>
             </div>
+
             <div className='card-content'>
-                <p>{rate}</p>
-                <span>{price}</span>
+                <span className='title'>{title}</span>
+                <span className='price'>{price} ₽</span>
             </div>
-            <button className='button-add'>купить</button>
+
+            <div className='card-content'>
+                <div>
+                    <div className='star'>
+                        <img src={star}/>
+                    </div>
+                    <span>{rate}</span>
+                </div>
+                <div>
+                    <button className='button-add' onClick={() => handleAddItem(id)}>купить</button>
+                </div>
+            </div>
         </div>
     )
 

@@ -56,7 +56,7 @@ const fetchAll = () =>
         resolve(headphones)
         window.setTimeout(function () {
             resolve(JSON.parse(localStorage.getItem('headphones')));
-        }, 1000);
+        }, 500);
     });
 
 export default
