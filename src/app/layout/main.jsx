@@ -18,8 +18,8 @@ const Main = () => {
     }, [])
 
     const updateBasketList = (index, isDelete) => {
-        let items = [...basketList]
-        let item = items[index]
+        const items = [...basketList]
+        const item = items[index]
         isDelete ? item.count-- : item.count++
         items[index] = item
         setBasketList(items)
@@ -45,7 +45,6 @@ const Main = () => {
                 addNewElemInBasketList(id)
             }
         }
-        console.log('basketList', basketList)
     }
 
     const removeElemFromBasketList = (elemIdForDelete) => {
@@ -58,7 +57,7 @@ const Main = () => {
         if (basketElemForDelete.count === 1) {
             removeElemFromBasketList(basketElemForDelete.id)
         } else {
-            updateBasketList(basketElemForDelete.id, true)
+            updateBasketList(itemIndex, true)
         }
 
     }
@@ -71,8 +70,9 @@ const Main = () => {
 
     return (
         <BrowserRouter>
-            <div className='page'>
+            <div className=''>
                 <Header itemCount={sumOfItemsInBasket()}/>
+
                 <Switch>
                     <Route path='/'
                            exact
@@ -89,6 +89,7 @@ const Main = () => {
                                        basketList={basketList}
                                        handleAddingItemInBasket={handleAddingItemInBasket}
                                        handleRemovingItemFromBasket={handleRemovingItemFromBasket}
+                                       handleDelete={removeElemFromBasketList}
                                    />
                                )
                            }}/>

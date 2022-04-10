@@ -1,6 +1,6 @@
-import byz from '../app/image/s852I.png'
-import ep from '../app/image/earPods.png'
-import ep2 from '../app/image/earPods2.png'
+import byz from '../image/s852I.png'
+import ep from '../image/earPods.png'
+import ep2 from '../image/earPods2.png'
 
 const headphones = [
     {

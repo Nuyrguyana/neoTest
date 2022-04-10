@@ -9,7 +9,7 @@ const Header = ({itemCount}) => {
         <header className='header'>
         <div className='container'>
             <div className='header-inner'>
-                <Link className='brand' to='/'>
+                <Link className='brand' to='/' title='главная'>
                     Qpick
                 </Link>
 

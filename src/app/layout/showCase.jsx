@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ProductCard from "./productCard";
 
 const ShowCase = ({items, addItemInBasket}) => {
     return (
-        <div>
+        <div className='container'>
             <ul>
+                <p className='subtitle'>Наушники</p>
                 {items.map((item) => {
                     return (<li
                             key={item.id.toString()}
@@ -16,7 +17,11 @@ const ShowCase = ({items, addItemInBasket}) => {
                                          rate={item.rate}/>
                         </li>
                     )
+
                 })}
+            </ul>
+            <ul>
+                <p className='subtitle'>Беспроводные наушники</p>
             </ul>
         </div>
     )
