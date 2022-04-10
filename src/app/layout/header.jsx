@@ -4,7 +4,6 @@ import basket from '../../icon/Vector2.svg'
 import {Link} from "react-router-dom";
 
 const Header = ({itemCount}) => {
-    console.log('icount', itemCount)
     return (
         <header className='header'>
             <div className='container'>

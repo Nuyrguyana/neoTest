@@ -1,7 +1,6 @@
 import React from "react";
 import CardBasket from "./cardBasket";
 import TotalBasketCard from "./totalBasketCard";
-import Footer from "./footer";
 
 const Basket = ({basketList, handleDelete, handleAddingItemInBasket, handleRemovingItemFromBasket}) => {
 

@@ -7,7 +7,6 @@ body {
 
 .page {
     padding: 15px;
-    /*margin: 15px;*/
 }
 
 .container {
@@ -116,7 +115,6 @@ body {
 
 .card-content-image {
     display: flex;
-    /*align-items: center;*/
     width: 220px;
     height: 237px;
     padding: 15px 64px 54px 65px;
@@ -171,9 +169,6 @@ body {
     color: #575757;
     font-size: 17px;
     font-weight: bold;
-    /*    !*position: relative;*!*/
-    /*    bottom: 100%;*/
-    /*    right: 100%;*/
 }
 
 .button-add:hover {
@@ -243,7 +238,6 @@ body {
     background: #FFFFFF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-    /*margin: 15px;*/
     padding: 15px;
     margin-left: auto;
     margin-right: auto;

@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCard from "./productCard";
-import Footer from "./footer";
 
 const ShowCase = ({headphones, wirelessHeadphones, addItemInBasket}) => {
     return (
@@ -18,12 +17,9 @@ const ShowCase = ({headphones, wirelessHeadphones, addItemInBasket}) => {
                                              title={item.title}
                                              price={item.price}
                                              rate={item.rate}
-                                             handleAddItem={addItemInBasket}
-
-                                />
+                                             handleAddItem={addItemInBasket}/>
                             </li>
                         )
-
                     })}
                 </ul>
                 <ul>
@@ -38,12 +34,9 @@ const ShowCase = ({headphones, wirelessHeadphones, addItemInBasket}) => {
                                              title={item.title}
                                              price={item.price}
                                              rate={item.rate}
-                                             handleAddItem={addItemInBasket}
-
-                                />
+                                             handleAddItem={addItemInBasket}/>
                             </li>
                         )
-
                     })}
                 </ul>
             </div>
