@@ -33,7 +33,6 @@ const Basket = ({basketList, handleDelete, handleAddingItemInBasket, handleRemov
                     )
                 })}
                 <TotalBasketCard allSum={allSum()}/>
-                <Footer/>
             </ul>
         </div>
     )

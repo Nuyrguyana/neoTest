@@ -6,47 +6,46 @@ const ShowCase = ({headphones, wirelessHeadphones, addItemInBasket}) => {
     return (
         <div className='container'>
             <div className='ul-showcase'>
-            <ul>
-                <p className='subtitle'>Наушники</p>
-                {headphones.map((item) => {
-                    return (<li
-                            className='card-product'
-                            key={item.id.toString()}
-                        >
-                            <ProductCard id={item.id}
-                                         img={item.img}
-                                         title={item.title}
-                                         price={item.price}
-                                         rate={item.rate}
-                                         handleAddItem={addItemInBasket}
+                <ul>
+                    <p className='subtitle'>Наушники</p>
+                    {headphones.map((item) => {
+                        return (<li
+                                className='card-product'
+                                key={item.id.toString()}
+                            >
+                                <ProductCard id={item.id}
+                                             img={item.img}
+                                             title={item.title}
+                                             price={item.price}
+                                             rate={item.rate}
+                                             handleAddItem={addItemInBasket}
 
-                            />
-                        </li>
-                    )
+                                />
+                            </li>
+                        )
 
-                })}
-            </ul>
-            <ul>
-                <p className='subtitle'>Беспроводные наушники</p>
-                {wirelessHeadphones.map((item) => {
-                    return (<li
-                            className='card-product'
-                            key={item.id.toString()}
-                        >
-                            <ProductCard id={item.id}
-                                         img={item.img}
-                                         title={item.title}
-                                         price={item.price}
-                                         rate={item.rate}
-                                         handleAddItem={addItemInBasket}
+                    })}
+                </ul>
+                <ul>
+                    <p className='subtitle'>Беспроводные наушники</p>
+                    {wirelessHeadphones.map((item) => {
+                        return (<li
+                                className='card-product'
+                                key={item.id.toString()}
+                            >
+                                <ProductCard id={item.id}
+                                             img={item.img}
+                                             title={item.title}
+                                             price={item.price}
+                                             rate={item.rate}
+                                             handleAddItem={addItemInBasket}
 
-                            />
-                        </li>
-                    )
+                                />
+                            </li>
+                        )
 
-                })}
-                <Footer/>
-            </ul>
+                    })}
+                </ul>
             </div>
         </div>
     )

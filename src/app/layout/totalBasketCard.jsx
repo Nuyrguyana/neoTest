@@ -3,7 +3,7 @@ const TotalBasketCard = ({allSum}) => {
         <div className='content-total'>
             <div className='total'>
                 <div>ИТОГО</div>
-                <div>{allSum}</div>
+                <div>₽ {allSum}</div>
             </div>
             <div className='registration'>
             <button className='registration-btn'>Перейти к оформлению</button>

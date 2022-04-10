@@ -5,6 +5,7 @@ import fetchAllHeadphones from "../../api/headphones.api";
 import fetchAllWirelessHeadphones from '../../api/wirelessHeadphones.api'
 import Basket from "./basket";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Footer from "./footer";
 
 const Main = () => {
     const [basketList, setBasketList] = useState([])
@@ -108,6 +109,7 @@ const Main = () => {
                                )
                            }}/>
                 </Switch>
+                <Footer/>
             </div>
         </BrowserRouter>
     )

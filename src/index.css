@@ -4,10 +4,12 @@ body {
     line-height: 1.6;
     background: #EAEAEA;
 }
+
 .page {
     padding: 15px;
     /*margin: 15px;*/
 }
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -120,6 +122,13 @@ body {
     padding: 15px 64px 54px 65px;
 }
 
+.bucket {
+    background: transparent;
+    border: none;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+}
+
 .img-product {
     text-align: center;
     width: 100%;
@@ -220,15 +229,16 @@ body {
 }
 
 .registration {
-text-align: center;
+    text-align: center;
     height: 50px;
+    margin: 15px;
 }
 
 /* footer */
 
 .content-footer {
     display: inline-block;
-    width: 80%;
+    width: 98%;
     height: 149px;
     background: #FFFFFF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -239,7 +249,7 @@ text-align: center;
     margin-right: auto;
 }
 
-.menu-footer     {
+.menu-footer {
     list-style-type: none;
     text-align: left;
 }
@@ -268,5 +278,5 @@ text-align: center;
 
 
 .b-footer {
-cursor: pointer;
+    cursor: pointer;
 }
