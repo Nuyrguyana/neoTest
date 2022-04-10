@@ -1,4 +1,4 @@
-import s8521I from "../app/layout/image/s852I.png";
+import s8521I from "../app/image/s852I.png";
 
 const wirelessHeadphones = [
     {

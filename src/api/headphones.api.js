@@ -1,6 +1,6 @@
-import byz from '../app/layout/image/s852I.png'
-import ep from '../app/layout/image/earPods.png'
-import ep2 from '../app/layout/image/earPods2.png'
+import byz from '../app/image/s852I.png'
+import ep from '../app/image/earPods.png'
+import ep2 from '../app/image/earPods2.png'
 
 const headphones = [
     {
@@ -56,7 +56,7 @@ const fetchAll = () =>
         resolve(headphones)
         window.setTimeout(function () {
             resolve(JSON.parse(localStorage.getItem('headphones')));
-        }, 2000);
+        }, 1000);
     });
 
 export default

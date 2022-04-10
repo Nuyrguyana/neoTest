@@ -1,9 +1,6 @@
 import React from "react";
-// import img1 from '../layout/image/s852I.png'
 
 const ProductCard = ({img, title, price, rate}) => {
-    console.log("image", img);
-
     return (
         <div className='content'>
             <div className='card-content-header'>
